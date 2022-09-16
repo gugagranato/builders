@@ -18,4 +18,27 @@ describe('<Logo />', () => {
       screen.getByLabelText(/Platform Builders/i).parentElement
     ).toHaveStyle({ color: theme.colors.white })
   })
+
+  it('should render a large logo by default', () => {
+    renderWithTheme(<Logo />)
+    expect(
+      screen.getByLabelText(/Platform Builders/i).parentElement
+    ).toHaveStyle({ width: '30rem' })
+  })
+
+  it('should render a normal logo by props', () => {
+    renderWithTheme(<Logo size="normal" />)
+    expect(
+      screen.getByLabelText(/Platform Builders/i).parentElement
+    ).toHaveStyle({ width: '20rem' })
+  })
+
+  it('should render a large logo without text', () => {
+    renderWithTheme(<Logo hideOnMobile />)
+    expect(
+      screen.getByLabelText(/Platform Builders/i).parentElement
+    ).toHaveStyleRule('width', '5.8rem', {
+      media: '(max-width: 768px)'
+    })
+  })
 })
