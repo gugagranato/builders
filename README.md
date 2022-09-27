@@ -18,6 +18,10 @@ O usuário ao entrar na aplicação verá uma página inicial, com a explicaçao
 Após entrar, o usuário poderá visualizar os dados climáticos da sua região, além de visualizar sua localização no [Google Maps](https://maps.google.com).
 
 
+Foi realizado o deploy do projeto na [Vercel](https://vercel.com)
+
+[Platform Builders](https://platformbuilders.vercel.app/)
+
 ## 🎨 Layout
 
 O layout da aplicação:
@@ -70,6 +74,12 @@ $ yarn dev
 
 # O servidor inciará na porta:3000 - acesse http://localhost:3000
 ```
+
+## IMPORTANTE
+
+Ao abrir o sistema, liberar acesso à localização. 
+
+
 
 ## 📝 Licença
 
