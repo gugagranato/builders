@@ -10,7 +10,7 @@ import Base from 'templates/Base'
 import { convertTemperature } from 'utils/convertTemperature'
 import { isToday } from 'helpers/functions'
 
-import * as S from './styles'
+import * as S from '../styles/styles'
 import api from 'services/api'
 
 const GOOGLE_MAPS_KEY = `AIzaSyA4qWtMB7nt92Hl47Cw-56k0YiuOtci6_c`
