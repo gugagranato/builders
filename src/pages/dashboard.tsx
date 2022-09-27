@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import { WeatherHailDay } from '@styled-icons/fluentui-system-filled'
 import { Refresh } from '@styled-icons/boxicons-regular'
-import axios from 'axios'
 import { toast } from 'react-toastify'
 
 import Paper from 'components/Paper'
@@ -12,6 +11,7 @@ import { convertTemperature } from 'utils/convertTemperature'
 import { isToday } from 'helpers/functions'
 
 import * as S from './styles'
+import api from 'services/api'
 
 const GOOGLE_MAPS_KEY = `AIzaSyA4qWtMB7nt92Hl47Cw-56k0YiuOtci6_c`
 const WEATHER_KEY = `8ba70a82649a2cbe8bad13dea2ea2a4e`
@@ -73,8 +73,8 @@ const Dashboard = () => {
     const { lat, lng } = geolocation
     try {
       setLoading(true)
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}`
+      const response = await api.get(
+        `/weather?lat=${lat}&lon=${lng}&appid=${WEATHER_KEY}`
       )
       if (response.status === 200) {
         const { data } = response
@@ -91,8 +91,8 @@ const Dashboard = () => {
 
   const getWeatherNextDays = async (position: GeolocationProps) => {
     try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${position.lat}&lon=${position.lng}&appid=${WEATHER_KEY}`
+      const response = await api.get(
+        `/forecast?lat=${position.lat}&lon=${position.lng}&appid=${WEATHER_KEY}`
       )
       if (response.status === 200) {
         setNextDaysWeather(response.data)
