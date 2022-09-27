@@ -20,7 +20,7 @@ Após entrar, o usuário poderá visualizar os dados climáticos da sua região,
 
 Foi realizado o deploy do projeto na [Vercel](https://vercel.com)
 
-[Platform Builders](https://platformbuilders.vercel.app/)
+👉 **CLIQUE AQUI** [Platform Builders](https://platformbuilders.vercel.app/)
 
 ## 🎨 Layout
 
