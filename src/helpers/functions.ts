@@ -1,4 +1,4 @@
-export const isToday = (timestamp: EpochTimeStamp) => {
+export const isToday = (timestamp: number) => {
   const today = new Date()
   const date = new Date(timestamp * 1000)
   if (today.setHours(0, 0, 0, 0) == date.setHours(0, 0, 0, 0)) {
