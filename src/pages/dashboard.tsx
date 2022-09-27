@@ -12,7 +12,6 @@ import { convertTemperature } from 'utils/convertTemperature'
 import { isToday } from 'helpers/functions'
 
 import * as S from './styles'
-import Image from 'next/image'
 
 const GOOGLE_MAPS_KEY = `AIzaSyA4qWtMB7nt92Hl47Cw-56k0YiuOtci6_c`
 const WEATHER_KEY = `8ba70a82649a2cbe8bad13dea2ea2a4e`
@@ -208,7 +207,7 @@ const Dashboard = () => {
                 <Paper key={timestamp} size="small">
                   <S.WrapperSmallPaper>
                     <S.WrapperImage>
-                      <Image
+                      <img
                         width={50}
                         src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
                       />
