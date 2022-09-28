@@ -22,6 +22,9 @@ Foi realizado o deploy do projeto na [Vercel](https://vercel.com)
 
 👉 **CLIQUE AQUI** [Platform Builders](https://platformbuilders.vercel.app/)
 
+📱 **Foi criado um PWA do sistema também.** 
+
+
 ## 🎨 Layout
 
 O layout da aplicação:
@@ -75,10 +78,14 @@ $ yarn dev
 # O servidor inciará na porta:3000 - acesse http://localhost:3000
 ```
 
-## IMPORTANTE
+##  :warning: IMPORTANTE
 
 Ao abrir o sistema, liberar acesso à localização. 
 
+ - No computador é só liberar na barra de navegação;
+ - No iPhone vá em: Ajustes > Localização > Busque pelo aplicativo (Safari, Chrome) > Pedir a próxima vez > Salve.
+
+Após isso, quando entrar novamente, o navegador pedirá acesso à localização.
 
 
 ## 📝 Licença
